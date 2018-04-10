@@ -1,9 +1,15 @@
-sudo false
+sudo: false
 
-language node_js
-node_js
+language: node_js
+node_js:
   - 9
 
-branches
-  only
+branches:
+  only:
     - master
+    
+deploy:
+  provider: heroku
+  app: "factory-line-app"
+  api_key:
+    secure: "a2a80624-234e-4523-a468-e90998b690cc"
